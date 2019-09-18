@@ -122,11 +122,11 @@ public class Transaction extends ChildMessage {
     public static final int FORKID_VERSION = 2; //Version 2 and above will require the new signature hash
 
     // These are bitcoin serialized.
-    private long version;
-    private ArrayList<TransactionInput> inputs;
-    private ArrayList<TransactionOutput> outputs;
+    public long version;
+    public ArrayList<TransactionInput> inputs;
+    public ArrayList<TransactionOutput> outputs;
 
-    private long lockTime;
+    public long lockTime;
 
     // This is either the time the transaction was broadcast as measured from the local clock, or the time from the
     // block in which it was included. Note that this can be changed by re-orgs so the wallet may update this field.
